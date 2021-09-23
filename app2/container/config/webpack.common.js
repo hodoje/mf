@@ -1,3 +1,5 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = {
 	module: {
 		// Containes an object with an array of loaders (a lodaer tells Webpack how to process different files)
@@ -15,4 +17,9 @@ module.exports = {
 			},
 		],
 	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: "./public/index.html",
+		}),
+	],
 };
