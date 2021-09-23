@@ -1,7 +1,7 @@
 name: deploy-container
 
 on:
-  push:
+  pull_request_review:
     branches:
       - main
     paths:
