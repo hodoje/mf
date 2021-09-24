@@ -2,8 +2,7 @@ name: deploy-container
 
 on:
   pull_request:
-    types:
-      - "closed"
+    types: [closed]
     branches:
       - main
     paths:
