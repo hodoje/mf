@@ -9,6 +9,9 @@ const prodConfig = {
 	mode: "production",
 	output: {
 		filename: "[name].[contenthash].js",
+		// Used anytime you have some part of Webpack that tried to refer to a file that's been built by Webpack
+		// Example is when HtmlWebpackPlugin tries to refer to some JS file built by Webpack
+		publicPath: "/container/latest/",
 	},
 	plugins: [
 		new ModuleFederationPlugin({
