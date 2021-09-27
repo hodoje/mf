@@ -12,6 +12,7 @@ const generateClassName = createGenerateClassName({
 	productionPrefix: "au",
 });
 
+// Comment to trigger deploying auth
 function App({ history, onSignIn }) {
 	return (
 		<div>
