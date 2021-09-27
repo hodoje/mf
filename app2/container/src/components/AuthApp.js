@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { mount } from "auth/AuthApp";
 import { useHistory } from "react-router-dom";
 
-function AuthApp() {
+function AuthApp({ onSignIn }) {
 	const ref = useRef(null);
 	// Browser History
 	const history = useHistory();
@@ -18,6 +18,7 @@ function AuthApp() {
 					history.push(nextPathname);
 				}
 			},
+			onSignIn,
 		});
 
 		history.listen(onParentNavigate);
